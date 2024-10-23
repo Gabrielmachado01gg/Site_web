@@ -1,0 +1,172 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;  
+}
+.navbar{
+    display: flex;
+    flex-flow: row wrap;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    background:black;
+    position: fixed;
+    width: 100%
+
+}
+.logo{
+    flex: 20%;    
+    text-align: left;
+    font-family: "Lobster", sans-serif;
+    color: 	#FF4500;
+    font-size: 24px;
+    margin-left:10%;
+}
+.menu{
+    flex:70%;
+    text-align: right;
+    padding: 20px;
+}
+.menu a{
+    color: 	#FF4500;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 16px;
+}
+.menu a:hover{
+    color: white;
+    border-top: 4px solid white;
+}
+#botao{
+    background: #FF4500;
+    padding: 10px 25px;
+    color: white;
+    border-radius: 7px;
+    margin-right: 10%;
+    margin-left: 5%;
+}
+#botao:hover{
+    border: none;
+    background-color: white;
+    color: #FF4500;
+} 
+
+
+.primeira-div {
+    padding: 120px 20px 20px 20px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.food-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.description {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.description h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.description p {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #666;
+}
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-section h2 {
+    font-size: 20px;
+    color: #FF4500;
+    margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-section a img {
+    /* width: 30px;
+    height: 30px; */
+    margin: 0 10px;
+}
+
+.footer-bottom {
+    background-color: #111;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .footer-section {
+        flex: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
