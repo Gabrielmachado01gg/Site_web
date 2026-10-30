@@ -1,74 +1,105 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="fale-conosco.css">
-    <title>Yume Sushi</title>
+    <title>Fale conosco | Yume Sushi</title>
+    <meta name="description" content="Entre em contato com o Yume Sushi: formulário, telefone, e-mail e horário de funcionamento.">
+    <meta name="theme-color" content="#0e0e10">
+    <link rel="canonical" href="https://gabrielmachado01gg.github.io/Site_web/fale-conosco.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="Fale conosco | Yume Sushi">
+    <meta property="og:description" content="Entre em contato com o Yume Sushi: formulário, telefone, e-mail e horário de funcionamento.">
+    <meta property="og:image" content="https://gabrielmachado01gg.github.io/Site_web/assets/img/sashimi.webp">
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Serif+JP:wght@700&display=swap">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">
-            <h1>Yume Sushi</h1>
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+    <header class="nav">
+        <div class="container nav__interno">
+            <a class="marca" href="index.html" aria-label="Yume Sushi, página inicial">
+                <span class="marca__kanji" aria-hidden="true">夢</span>
+                Yume Sushi
+            </a>
+            <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu"><span></span></button>
+            <nav aria-label="Principal">
+                <ul class="nav__lista" id="menu-principal">
+                    <li><a class="nav__link" href="index.html">Início</a></li>
+                    <li><a class="nav__link" href="sobre-nos.html">Sobre nós</a></li>
+                    <li><a class="nav__link" href="cardapio.html">Cardápio</a></li>
+                    <li><a class="botao nav__cta" href="fale-conosco.html" aria-current="page">Fale conosco</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="menu">
-            <a href="index.html">Home</a>
-            <a href="sobre-nos.html">Sobre Nós</a>
-            <a href="cardapio.html">Cardápio</a>
-            <a id="botao" href="fale-conosco.html">Fale Conosco</a>
-        </div>
-    </nav>
+    </header>
 
-    <div class="form-container">
-        <h2>Fale Conosco</h2>
-        <form>
-            <div class="form-group">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
+    <main id="conteudo">
+        <section class="secao">
+            <div class="container contato">
+                <div>
+                    <span class="sobretitulo">Contato</span>
+                    <h1 style="font-size:clamp(2rem,4.5vw,3.2rem)">Fale conosco</h1>
+                    <p class="lead">Dúvidas, reservas ou sugestões? Escreva e responderemos o quanto antes.</p>
+                    <form class="formulario" id="form-contato" novalidate>
+                        <div class="campo">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" name="nome" autocomplete="name" required aria-describedby="erro-nome">
+                            <p class="campo__erro" id="erro-nome"></p>
+                        </div>
+                        <div class="campo">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="erro-email">
+                            <p class="campo__erro" id="erro-email"></p>
+                        </div>
+                        <div class="campo">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" rows="5" required aria-describedby="erro-mensagem"></textarea>
+                            <p class="campo__erro" id="erro-mensagem"></p>
+                        </div>
+                        <button class="botao" type="submit">Enviar mensagem</button>
+                        <p class="mensagem-status" id="status-envio" role="status" aria-live="polite"></p>
+                    </form>
+                </div>
+                <aside aria-label="Informações de contato">
+                    <ul class="info-lista">
+                        <li><strong>Endereço</strong>Rua Exemplo, 123, São Paulo, SP</li>
+                        <li><strong>Telefone</strong><a href="tel:+551112345678">(11) 1234-5678</a></li>
+                        <li><strong>E-mail</strong><a href="mailto:contato@yumesushi.com">contato@yumesushi.com</a></li>
+                        <li><strong>Funcionamento</strong>Segunda a sexta, 11h às 22h<br>Sábado, 12h às 23h<br>Domingo, 12h às 21h</li>
+                    </ul>
+                </aside>
             </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+        </section>
+    </main>
+    <footer class="rodape">
+        <div class="container rodape__grade">
+            <div>
+                <h2>Yume Sushi</h2>
+                <p>Culinária japonesa preparada com ingredientes frescos e muito cuidado.</p>
+                <p><small>Site fictício criado para fins educacionais. Endereço, telefone e e-mail são exemplos.</small></p>
             </div>
-            <div class="form-group">
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-            </div>
-            <div class="form-group">
-                <button type="submit">Enviar</button>
-            </div>
-        </form>
-    </div>
-    
-    <footer>
-        <div class="footer-content">            
-            <div class="footer-section contact">
+            <div>
                 <h2>Contato</h2>
-                <p><strong>Endereço:</strong> Rua Exemplo, 123, São Paulo, SP</p>
-                <p><strong>Telefone:</strong> (11) 1234-5678</p>
-                <p><strong>Email:</strong> contato@yumesushi.com</p>
+                <p>Rua Exemplo, 123, São Paulo, SP</p>
+                <p><a href="tel:+551112345678">(11) 1234-5678</a></p>
+                <p><a href="mailto:contato@yumesushi.com">contato@yumesushi.com</a></p>
             </div>
-            <div class="footer-section hours">
-                <h2>Horário de Funcionamento</h2>
-                <p>Segunda a Sexta: 11:00 - 22:00</p>
-                <p>Sábado: 12:00 - 23:00</p>
-                <p>Domingo: 12:00 - 21:00</p>
-            </div>
-            <div class="footer-section social">
-                <h2>Siga-nos</h2>
-                <a href="#"><img src="img/footer/facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="img/footer/instagram.png" alt="Instagram"></a>
-                <a href="#"><img src="img/footer/twitter.png" alt="Twitter"></a>
-            </div>
-            <div class="footer-section map">
-                <h2>Localização</h2>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111483.90318853714!2d-51.34359598159793!3d-29.168444713106197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951ea3200efac6ed%3A0x7cd369232232c419!2sSenac%20Caxias%20do%20Sul!5e0!3m2!1spt-BR!2sbr!4v1722380910315!5m2!1spt-BR!2sbr" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div>
+                <h2>Horário de funcionamento</h2>
+                <p>Segunda a sexta: 11h às 22h</p>
+                <p>Sábado: 12h às 23h</p>
+                <p>Domingo: 12h às 21h</p>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Yume Sushi. Todos os direitos reservados.</p>
+        <div class="container rodape__base">
+            <p>&copy; 2026 Yume Sushi. Projeto acadêmico de Gabriel Wiedenhoft.</p>
         </div>
-    </footer> 
- </body>
- </html>
-
+    </footer>
+    <script src="assets/js/main.js" defer></script>
+</body>
+</html>

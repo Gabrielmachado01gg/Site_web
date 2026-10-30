@@ -1,124 +1,164 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <title>Yume Sushi</title>
-    <link rel="stylesheet" href="cardapio.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio | Yume Sushi</title>
+    <meta name="description" content="Cardápio do Yume Sushi: combos de sushi, sashimi, temaki, hot roll, yakisoba e opção vegana, com preços.">
+    <meta name="theme-color" content="#0e0e10">
+    <link rel="canonical" href="https://gabrielmachado01gg.github.io/Site_web/cardapio.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="Cardápio | Yume Sushi">
+    <meta property="og:description" content="Cardápio do Yume Sushi: combos de sushi, sashimi, temaki, hot roll, yakisoba e opção vegana, com preços.">
+    <meta property="og:image" content="https://gabrielmachado01gg.github.io/Site_web/assets/img/sashimi.webp">
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Serif+JP:wght@700&display=swap">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">
-            <h1>Yume Sushi</h1>
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+    <header class="nav">
+        <div class="container nav__interno">
+            <a class="marca" href="index.html" aria-label="Yume Sushi, página inicial">
+                <span class="marca__kanji" aria-hidden="true">夢</span>
+                Yume Sushi
+            </a>
+            <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu"><span></span></button>
+            <nav aria-label="Principal">
+                <ul class="nav__lista" id="menu-principal">
+                    <li><a class="nav__link" href="index.html">Início</a></li>
+                    <li><a class="nav__link" href="sobre-nos.html">Sobre nós</a></li>
+                    <li><a class="nav__link" href="cardapio.html" aria-current="page">Cardápio</a></li>
+                    <li><a class="botao nav__cta" href="fale-conosco.html">Fale conosco</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="menu">
-            <a href="index.html">Home</a>
-            <a href="sobre-nos.html">Sobre Nós</a>
-            <a href="cardapio.html">Cardádio</a>
-            <a id="botao" href="fale-conosco.html">Fale Conosco</a>
-        </div>
-    </nav>    
-    <div class="primeira-div">
-        <div class="menu-item">
-            <img src="" alt="Sushi" class="food-image">
-            <div class="description">
-                <h2>Combo Sushi Clássico - R$ 45,00</h2>
-                <p>4 Sushis de Salmão, 4 Sushis de Atum, 4 Sushis de Peixe Branco</p>
+    </header>
+
+    <main id="conteudo">
+        <section class="secao">
+            <div class="container">
+                <div class="secao__cabecalho">
+                    <span class="sobretitulo">Cardápio</span>
+                    <h1 style="font-size:clamp(2rem,4.5vw,3.2rem)">Escolha o seu combo</h1>
+                    <p class="lead">Todos os pratos são preparados na hora. Use os filtros para encontrar o que combina com você.</p>
+                </div>
+                <ul class="filtros" aria-label="Filtrar por categoria">
+                <li><button class="filtro" type="button" data-filtro="todos" aria-pressed="true">Todos</button></li>
+                <li><button class="filtro" type="button" data-filtro="sushi" aria-pressed="false">Sushi e sashimi</button></li>
+                <li><button class="filtro" type="button" data-filtro="rolls" aria-pressed="false">Rolls e temaki</button></li>
+                <li><button class="filtro" type="button" data-filtro="quentes" aria-pressed="false">Quentes</button></li>
+                <li><button class="filtro" type="button" data-filtro="vegano" aria-pressed="false">Vegano</button></li>
+                <li><button class="filtro" type="button" data-filtro="compartilhar" aria-pressed="false">Para compartilhar</button></li>
+                </ul>
+                <p class="so-leitor-de-tela" role="status" aria-live="polite" id="contador-pratos">10 opções</p>
+                <ul class="cardapio">
+            <li class="prato revelar" data-categoria="sushi">
+                <div class="prato__foto"><img src="assets/img/menu/combo-01.webp" alt="Tábua preta com nigiris, sushis e uramakis variados" loading="lazy" width="720" height="480"></div>
+                <div class="prato__corpo">
+                    <div class="prato__topo"><h3>Combo Sushi Clássico</h3><span class="prato__preco">R$&nbsp;45,00</span></div>
+                    <p>4 sushis de salmão, 4 sushis de atum e 4 sushis de peixe branco.</p>
+                    <span class="prato__etiqueta">Clássico</span>
+                </div>
+            </li>
+            <li class="prato revelar" data-categoria="sushi">
+                <div class="prato__foto"><img src="assets/img/menu/combo-02.webp" alt="Caixa com uramakis empanados, sashimis de salmão e nigiris" loading="lazy" width="720" height="480"></div>
+                <div class="prato__corpo">
+                    <div class="prato__topo"><h3>Combo Sashimi Premium</h3><span class="prato__preco">R$&nbsp;60,00</span></div>
+                    <p>5 fatias de sashimi de salmão, 5 de atum e 5 de peixe branco.</p>
+                    <span class="prato__etiqueta">Mais pedido</span>
+                </div>
+            </li>
+            <li class="prato revelar" data-categoria="rolls">
+                <div class="prato__foto"><img src="assets/img/menu/combo-03.webp" alt="Bandeja grande com sashimis, nigiris e uramakis" loading="lazy" width="720" height="480"></div>
+                <div class="prato__corpo">
+                    <div class="prato__topo"><h3>Combo Temaki Duplo</h3><span class="prato__preco">R$&nbsp;35,00</span></div>
+                    <p>1 temaki de salmão com cream cheese, 1 de atum com cebolinha e 1 temaki Califórnia.</p>
+                </div>
+            </li>
+            <li class="prato revelar" data-categoria="rolls">
+                <div class="prato__foto"><img src="assets/img/menu/combo-04.webp" alt="Prato de hot rolls cobertos com salmão, ao lado de wasabi e gengibre" loading="lazy" width="720" height="480"></div>
+                <div class="prato__corpo">
+                    <div class="prato__topo"><h3>Combo Hot Roll</h3><span class="prato__preco">R$&nbsp;40,00</span></div>
+                    <p>8 hot rolls de salmão com cream cheese e 8 de camarão empanado com molho tarê.</p>
+                </div>
+            </li>
+            <li class="prato revelar" data-categoria="vegano">
+                <div class="prato__foto"><img src="assets/img/menu/combo-05.webp" alt="Tábua de ardósia com uramakis, hossomakis e nigiris" loading="lazy" width="720" height="480"></div>
+                <div class="prato__corpo">
+                    <div class="prato__topo"><h3>Combo Vegano</h3><span class="prato__preco">R$&nbsp;30,00</span></div>
+                    <p>4 sushis de abacate, 4 nigiris de pepino e 4 uramakis de cenoura e pepino.</p>
+                    <span class="prato__etiqueta">Vegano</span>
+                </div>
+            </li>
+            <li class="prato revelar" data-categoria="sushi">
+                <div class="prato__foto"><img src="assets/img/menu/combo-06.webp" alt="Tábua com rosa de salmão, nigiris e uramakis" loading="lazy" width="720" height="480"></div>
+                <div class="prato__corpo">
+                    <div class="prato__topo"><h3>Combo Especial</h3><span class="prato__preco">R$&nbsp;50,00</span></div>
+                    <p>4 nigiris de salmão, 4 nigiris de atum e 4 uramakis Filadélfia (salmão e cream cheese).</p>
+                </div>
+            </li>
+            <li class="prato revelar" data-categoria="quentes">
+                <div class="prato__foto"><img src="assets/img/menu/combo-07.webp" alt="Nigiris de salmão e atum e uramakis com ovas de peixe" loading="lazy" width="720" height="480"></div>
+                <div class="prato__corpo">
+                    <div class="prato__topo"><h3>Combo Yakisoba</h3><span class="prato__preco">R$&nbsp;35,00</span></div>
+                    <p>Porção de yakisoba de frango e 4 gyozas (pastéis japoneses) de carne.</p>
+                </div>
+            </li>
+            <li class="prato revelar" data-categoria="sushi">
+                <div class="prato__foto"><img src="assets/img/menu/combo-08.webp" alt="Travessa redonda com hot rolls, sashimis e sushis variados" loading="lazy" width="720" height="480"></div>
+                <div class="prato__corpo">
+                    <div class="prato__topo"><h3>Combo Deluxe</h3><span class="prato__preco">R$&nbsp;70,00</span></div>
+                    <p>6 sushis de salmão, 6 de atum, 6 de peixe branco e 2 uramakis de camarão.</p>
+                </div>
+            </li>
+            <li class="prato revelar" data-categoria="compartilhar">
+                <div class="prato__foto"><img src="assets/img/menu/combo-09.webp" alt="Bandeja preta com sushis, uramakis e hot rolls" loading="lazy" width="720" height="480"></div>
+                <div class="prato__corpo">
+                    <div class="prato__topo"><h3>Combo Tradicional</h3><span class="prato__preco">R$&nbsp;55,00</span></div>
+                    <p>2 temakis de salmão, 6 sushis de salmão e 8 hot rolls de salmão.</p>
+                </div>
+            </li>
+            <li class="prato revelar" data-categoria="compartilhar">
+                <div class="prato__foto"><img src="assets/img/menu/combo-10.webp" alt="Grande bandeja redonda com sushis, sashimis e uramakis com abacate" loading="lazy" width="720" height="480"></div>
+                <div class="prato__corpo">
+                    <div class="prato__topo"><h3>Combo Família</h3><span class="prato__preco">R$&nbsp;100,00</span></div>
+                    <p>10 fatias de sashimi de salmão, 10 de atum, 10 de peixe branco, 8 sushis de salmão e 8 de atum.</p>
+                    <span class="prato__etiqueta">Serve 3 a 4</span>
+                </div>
+            </li>
+                </ul>
+                <p class="aviso-vazio">Nenhum prato nesta categoria.</p>
             </div>
-        </div>
-        <div class="menu-item">
-            <img src="img/img-cardapio/img-2.jpeg" alt="Tempura" class="food-image">
-            <div class="description">
-                <h2>Combo Sashimi Premium - R$ 60,00</h2>
-                <p>5 Fatias de Sashimi de Salmão, 5 Fatias de Sashimi de Atum, 5 Fatias de Sashimi de Peixe Branco</p>
+        </section>
+    </main>
+    <footer class="rodape">
+        <div class="container rodape__grade">
+            <div>
+                <h2>Yume Sushi</h2>
+                <p>Culinária japonesa preparada com ingredientes frescos e muito cuidado.</p>
+                <p><small>Site fictício criado para fins educacionais. Endereço, telefone e e-mail são exemplos.</small></p>
             </div>
-        </div>
-        <div class="menu-item">
-            <img src="img/img-cardapio/img-3.png" alt="Ramen" class="food-image">
-            <div class="description">
-                <h2>Combo Temaki Duplo - R$ 35,00</h2>
-                <p>1 Temaki de Salmão com Cream Cheese, 1 Temaki de Atum com Cebolinha, 1 Temaki Califórnia</p>
-            </div>
-        </div>
-        <div class="menu-item">
-            <img src="img/img-cardapio/img-4.png" alt="Ramen" class="food-image">
-            <div class="description">
-                <h2>Combo Hot Roll - R$ 40,00</h2>
-                <p>8 Hot Rolls de Salmão com Cream Cheese, 8 Hot Rolls de Camarão Empanado e Molho Tarê</p>
-            </div>
-        </div>
-        <div class="menu-item">
-            <img src="img/img-cardapio/iimg-5.jpg" alt="Ramen" class="food-image">
-            <div class="description">
-                <h2>Combo Vegano - R$ 30,00</h2>
-                <p>4 Sushis de Abacate, 4 Nigiris de Pepino, 4 Uramakis de Cenoura e Pepino</p>
-            </div>
-        </div>
-        <div class="menu-item">
-            <img src="img/img-cardapio/img-6.jpeg" alt="Ramen" class="food-image">
-            <div class="description">
-                <h2>Combo Especial - R$ 50,00</h2>
-                <p>4 Nigiris de Salmão, 4 Nigiris de Atum, 4 Uramakis Filadélfia (Salmão e Cream Cheese)</p>
-            </div>
-        </div>
-        <div class="menu-item">
-            <img src="img/img-cardapio/img-7.jpg" alt="Ramen" class="food-image">
-            <div class="description">
-                <h2>Combo Yakisoba - R$ 35,00</h2>
-                <p>Porção de Yakisoba de Frango, 4 Gyozas (Pastéis Japoneses) de Carne</p>
-            </div>
-        </div>
-        <div class="menu-item">
-            <img src="img/img-cardapio/img-8.jpg" alt="Ramen" class="food-image">
-            <div class="description">
-                <h2>Combo Deluxe - R$ 70,00</h2>
-                <p>6 Sushis de Salmão, 6 Sushis de Atum, 6 Sushis de Peixe Branco, 2 Uramakis de Camarão</p>
-            </div>
-        </div>
-        <div class="menu-item">
-            <img src="img/img-cardapio/img-9.jpg" alt="Ramen" class="food-image">
-            <div class="description">
-                <h2>Combo Tradicional - R$ 55,00</h2>
-                <p>2 Temakis de Salmão, 6 Sushis de Salmão, 8 Hot Rolls de Salmão</p>
-            </div>
-        </div>
-        <div class="menu-item">
-            <img src="img/img-cardapio/img-10.jpg" alt="Ramen" class="food-image">
-            <div class="description">
-                <h2>Combo Família - R$ 100,00</h2>
-                <p>10 Fatias de Sashimi de Salmão, 10 Fatias de Sashimi de Atum, 10 Fatias de Sashimi de Peixe Branco, 8 Sushis de Salmão
-                    8 Sushis de Atum</p>
-            </div>
-        </div>
-    </div>
-     <footer>
-        <div class="footer-content">            
-            <div class="footer-section contact">
+            <div>
                 <h2>Contato</h2>
-                <p><strong>Endereço:</strong> Rua Exemplo, 123, São Paulo, SP</p>
-                <p><strong>Telefone:</strong> (11) 1234-5678</p>
-                <p><strong>Email:</strong> contato@yumesushi.com</p>
+                <p>Rua Exemplo, 123, São Paulo, SP</p>
+                <p><a href="tel:+551112345678">(11) 1234-5678</a></p>
+                <p><a href="mailto:contato@yumesushi.com">contato@yumesushi.com</a></p>
             </div>
-            <div class="footer-section hours">
-                <h2>Horário de Funcionamento</h2>
-                <p>Segunda a Sexta: 11:00 - 22:00</p>
-                <p>Sábado: 12:00 - 23:00</p>
-                <p>Domingo: 12:00 - 21:00</p>
-            </div>
-            <div class="footer-section social">
-                <h2>Siga-nos</h2>
-                <a href="#"><img src="img/footer/facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="img/footer/instagram.png" alt="Instagram"></a>
-                <a href="#"><img src="img/footer/twitter.png" alt="Twitter"></a>
-            </div>
-            <div class="footer-section map">
-                <h2>Localização</h2>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111483.90318853714!2d-51.34359598159793!3d-29.168444713106197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951ea3200efac6ed%3A0x7cd369232232c419!2sSenac%20Caxias%20do%20Sul!5e0!3m2!1spt-BR!2sbr!4v1722380910315!5m2!1spt-BR!2sbr" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div>
+                <h2>Horário de funcionamento</h2>
+                <p>Segunda a sexta: 11h às 22h</p>
+                <p>Sábado: 12h às 23h</p>
+                <p>Domingo: 12h às 21h</p>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Yume Sushi. Todos os direitos reservados.</p>
+        <div class="container rodape__base">
+            <p>&copy; 2026 Yume Sushi. Projeto acadêmico de Gabriel Wiedenhoft.</p>
         </div>
-    </footer>  
+    </footer>
+    <script src="assets/js/main.js" defer></script>
 </body>
 </html>
