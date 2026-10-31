@@ -62,4 +62,4 @@ Settings → Pages → Source: *Deploy from a branch* → `main` → `/ (root)`.
 
 ## Autor
 
-Gabriel Wiedenhoft — [LinkedIn](https://www.linkedin.com/in/gabriel-wiedenhoft-machado)
+Gabriel Wiedenhoft — [LinkedIn](https://www.linkedin.com/in/gabriel-wiedenhoft-8a3256286)
